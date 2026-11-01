@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TFG GAMING — Gameplay, Gear Reviews &amp; Brand Collabs</title>
+<meta name="description" content="TFG GAMING — Indian gaming creator. Gameplay, honest gear reviews, budget setup guides and brand collaborations. Watch the latest videos, shop my gear picks, or work with me." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="TFG GAMING — Gameplay, Gear Reviews &amp; Brand Collabs" />
+<meta property="og:description" content="Gameplay, honest gear reviews and no-fluff guides for Indian gamers." />
+<meta name="theme-color" content="#08090c" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2308090c'/%3E%3Ctext x='50' y='68' font-family='Arial,sans-serif' font-size='46' font-weight='bold' fill='%23c2ff3d' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#08090c;
+    --bg-soft:#0e1016;
+    --card:rgba(255,255,255,.045);
+    --card-hi:rgba(255,255,255,.075);
+    --line:rgba(255,255,255,.09);
+    --txt:#e9ecf1;
+    --muted:#9aa3b2;
+    --lime:#c2ff3d;
+    --cyan:#5ee6ff;
+    --radius:18px;
+    --max:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--txt);
+    font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+  ::selection{background:var(--lime);color:#08090c}
+
+  .bg-fx{position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background:
+      radial-gradient(900px 520px at 78% -8%, rgba(194,255,61,.10), transparent 60%),
+      radial-gradient(760px 480px at 6% 12%, rgba(94,230,255,.09), transparent 60%),
+      radial-gradient(700px 700px at 50% 108%, rgba(194,255,61,.06), transparent 65%);
+  }
+  .bg-grid{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.35;
+    background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+    background-size:64px 64px;
+    mask-image:radial-gradient(circle at 50% 0%,#000 0%,transparent 72%);
+    -webkit-mask-image:radial-gradient(circle at 50% 0%,#000 0%,transparent 72%);
+  }
+
+  .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 22px}
+  section{padding:92px 0;position:relative}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--lime);margin-bottom:16px;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--lime);border-radius:2px}
+  h2.sec-title{
+    font-family:'Anton',Impact,sans-serif;font-weight:400;letter-spacing:.01em;
+    font-size:clamp(30px,4.6vw,50px);line-height:1.02;text-transform:uppercase;margin-bottom:14px;
+  }
+  .sec-sub{color:var(--muted);max-width:620px;font-size:15.5px}
+  .sec-head{margin-bottom:44px}
+
+  /* ---------- NAV ---------- */
+  .nav{position:sticky;top:0;z-index:60;backdrop-filter:blur(16px);
+    background:rgba(8,9,12,.72);border-bottom:1px solid var(--line);}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px;gap:18px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Anton',sans-serif;font-size:20px;letter-spacing:.06em;text-transform:uppercase}
+  .logo .dot{width:11px;height:11px;border-radius:50%;background:var(--lime);box-shadow:0 0 16px var(--lime);flex:none}
+  .nav-links{display:flex;gap:26px;align-items:center;font-size:14px;font-weight:500;color:var(--muted)}
+  .nav-links a:hover{color:var(--txt)}
+  .nav-cta{
+    display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;
+    background:var(--lime);color:#08090c;font-weight:700;font-size:13.5px;letter-spacing:.02em;
+    transition:transform .18s ease,box-shadow .18s ease;box-shadow:0 0 0 rgba(194,255,61,0);
+  }
+  .nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 26px rgba(194,255,61,.28)}
+  .burger{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:11px;align-items:center;justify-content:center;font-size:18px}
+  .mobile-menu{display:none;flex-direction:column;gap:2px;padding:10px 22px 20px;border-bottom:1px solid var(--line);background:rgba(8,9,12,.97)}
+  .mobile-menu a{padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.05);font-size:15px;color:var(--muted)}
+  .mobile-menu.open{display:flex}
+  @media(max-width:860px){
+    .nav-links{display:none}
+    .burger{display:inline-flex}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{padding:74px 0 68px;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center}
+  @media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:38px}}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;
+    border:1px solid rgba(194,255,61,.32);background:rgba(194,255,61,.07);
+    color:var(--lime);font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:22px;
+  }
+  .live-dot{width:7px;height:7px;border-radius:50%;background:var(--lime);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.82)}}
+  h1.hero-title{
+    font-family:'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;
+    font-size:clamp(46px,8.4vw,92px);line-height:.92;letter-spacing:.005em;margin-bottom:20px;
+  }
+  h1.hero-title .grad{
+    background:linear-gradient(100deg,var(--lime),var(--cyan));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero-tag{color:var(--muted);font-size:clamp(15px,1.7vw,17.5px);max-width:520px;margin-bottom:30px}
+  .btn-row{display:flex;flex-wrap:wrap;gap:13px;margin-bottom:38px}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:999px;
+    font-weight:700;font-size:14.5px;letter-spacing:.01em;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s;
+  }
+  .btn-primary{background:var(--lime);color:#08090c}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(194,255,61,.3)}
+  .btn-ghost{border:1px solid var(--line);color:var(--txt);background:rgba(255,255,255,.03)}
+  .btn-ghost:hover{border-color:rgba(194,255,61,.5);background:rgba(194,255,61,.07);transform:translateY(-2px)}
+
+  .stat-row{display:flex;flex-wrap:wrap;gap:14px}
+  .stat{
+    flex:1 1 120px;padding:15px 16px;border-radius:14px;border:1px solid var(--line);
+    background:var(--card);
+  }
+  .stat b{display:block;font-family:'Anton',sans-serif;font-weight:400;font-size:26px;line-height:1.1;color:var(--lime);letter-spacing:.02em}
+  .stat span{font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600}
+
+  .hero-card{
+    position:relative;border-radius:24px;border:1px solid var(--line);overflow:hidden;
+    background:linear-gradient(160deg,rgba(194,255,61,.14),rgba(94,230,255,.07) 45%,rgba(255,255,255,.03));
+    padding:26px;box-shadow:0 30px 80px -30px rgba(0,0,0,.9);
+  }
+  .hero-card .cam{aspect-ratio:16/10;border-radius:16px;display:grid;place-items:center;
+    background:
+      radial-gradient(circle at 30% 20%,rgba(194,255,61,.22),transparent 55%),
+      radial-gradient(circle at 75% 80%,rgba(94,230,255,.2),transparent 55%),
+      #0b0d12;
+    border:1px solid var(--line);position:relative;overflow:hidden;
+  }
+  .hero-card .cam::after{
+    content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(0deg,rgba(255,255,255,.045) 0 1px,transparent 1px 4px);
+    opacity:.5;
+  }
+  .cam-badge{position:absolute;top:12px;left:12px;display:flex;align-items:center;gap:7px;
+    padding:5px 11px;border-radius:999px;background:rgba(8,9,12,.75);border:1px solid var(--line);
+    font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--lime);z-index:2}
+  .cam-emoji{font-size:52px;filter:drop-shadow(0 0 22px rgba(194,255,61,.5));z-index:2}
+  .hero-card h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:19px;letter-spacing:.03em;margin:18px 0 6px}
+  .hero-card p{font-size:13.5px;color:var(--muted)}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{border-block:1px solid var(--line);background:rgba(255,255,255,.02);overflow:hidden;padding:14px 0}
+  .marquee-track{display:flex;gap:44px;white-space:nowrap;animation:scroll 26s linear infinite;width:max-content}
+  .marquee-track span{font-family:'Anton',sans-serif;font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:rgba(233,236,241,.34);display:flex;align-items:center;gap:44px}
+  .marquee-track span::after{content:"◆";color:var(--lime);font-size:9px}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* ---------- CARDS / GRID ---------- */
+  .grid{display:grid;gap:20px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:980px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:640px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+  .card{
+    border:1px solid var(--line);border-radius:var(--radius);background:var(--card);
+    overflow:hidden;transition:transform .22s ease,border-color .22s ease,background .22s ease;
+    display:flex;flex-direction:column;
+  }
+  .card:hover{transform:translateY(-4px);border-color:rgba(194,255,61,.4);background:var(--card-hi)}
+
+  .thumb{aspect-ratio:16/9;position:relative;display:grid;place-items:center;overflow:hidden;
+    background:radial-gradient(circle at 28% 25%,rgba(194,255,61,.30),transparent 58%),
+               radial-gradient(circle at 76% 78%,rgba(94,230,255,.26),transparent 58%),#0d1017;}
+  .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .play{
+    width:52px;height:52px;border-radius:50%;display:grid;place-items:center;z-index:2;
+    background:rgba(8,9,12,.72);border:1px solid rgba(194,255,61,.5);color:var(--lime);
+    font-size:17px;transition:transform .2s ease,background .2s ease;
+  }
+  .card:hover .play{transform:scale(1.1);background:var(--lime);color:#08090c}
+  .thumb .tag{position:absolute;top:10px;left:10px;z-index:2;font-size:10.5px;font-weight:700;letter-spacing:.09em;
+    text-transform:uppercase;padding:4px 9px;border-radius:6px;background:rgba(8,9,12,.8);border:1px solid var(--line);color:var(--cyan)}
+
+  .card-body{padding:16px 17px 18px;display:flex;flex-direction:column;gap:7px;flex:1}
+  .card-body h3{font-size:15.5px;font-weight:600;line-height:1.35;letter-spacing:-.01em}
+  .meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .meta i{width:3px;height:3px;border-radius:50%;background:var(--muted);display:inline-block}
+
+  .featured{grid-column:1/-1;display:grid;grid-template-columns:1.35fr 1fr;align-items:stretch;margin-bottom:22px}
+  .featured .thumb{aspect-ratio:16/9;border-radius:0;min-height:100%}
+  .featured .card-body{padding:26px 28px;justify-content:center;gap:12px}
+  .featured h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(20px,2.6vw,29px);line-height:1.08}
+  @media(max-width:820px){.featured{grid-template-columns:1fr}}
+
+  /* ---------- STORE ---------- */
+  .prod-img{aspect-ratio:4/3;display:grid;place-items:center;font-size:44px;
+    background:radial-gradient(circle at 50% 30%,rgba(194,255,61,.16),transparent 62%),#0b0d12;position:relative}
+  .prod-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .price{font-family:'Anton',sans-serif;font-size:21px;color:var(--lime);letter-spacing:.02em;margin-top:2px}
+  .buy{
+    margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:11px 16px;border-radius:11px;border:1px solid rgba(194,255,61,.4);
+    background:rgba(194,255,61,.1);color:var(--lime);font-weight:700;font-size:13.5px;
+    transition:background .18s,color .18s;
+  }
+  .buy:hover{background:var(--lime);color:#08090c}
+  .disclosure{font-size:12px;color:var(--muted);margin-top:26px;padding:13px 16px;
+    border:1px dashed rgba(255,255,255,.16);border-radius:12px;background:rgba(255,255,255,.02)}
+
+  /* ---------- SUPPORT ---------- */
+  .support-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  @media(max-width:820px){.support-grid{grid-template-columns:1fr}}
+  .panel{border:1px solid var(--line);border-radius:22px;padding:28px;background:var(--card)}
+  .upi-box{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    margin:16px 0 20px;padding:15px 17px;border-radius:14px;border:1px dashed rgba(194,255,61,.4);background:rgba(194,255,61,.06)}
+  .upi-id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:16.5px;font-weight:600;letter-spacing:.02em;color:var(--lime);word-break:break-all}
+  .copy-btn{padding:9px 16px;border-radius:9px;background:rgba(194,255,61,.16);border:1px solid rgba(194,255,61,.45);
+    color:var(--lime);font-size:12.5px;font-weight:700;transition:background .18s,color .18s}
+  .copy-btn:hover{background:var(--lime);color:#08090c}
+  .qr-wrap{display:grid;place-items:center;gap:12px;text-align:center}
+  .qr-wrap img{width:190px;height:190px;border-radius:16px;background:#fff;padding:10px;box-shadow:0 16px 40px -18px rgba(194,255,61,.5)}
+  .qr-wrap small{color:var(--muted);font-size:12px}
+  .support-list{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+  .support-item{display:flex;align-items:center;gap:13px;padding:14px 16px;border-radius:13px;
+    border:1px solid var(--line);background:rgba(255,255,255,.025);transition:border-color .18s,background .18s}
+  .support-item:hover{border-color:rgba(194,255,61,.42);background:rgba(194,255,61,.06)}
+  .si-icon{width:38px;height:38px;flex:none;border-radius:10px;display:grid;place-items:center;
+    background:rgba(194,255,61,.13);color:var(--lime);font-size:16px}
+  .si-txt b{display:block;font-size:14px}
+  .si-txt span{font-size:12.5px;color:var(--muted)}
+  .si-arrow{margin-left:auto;color:var(--muted);font-size:15px}
+
+  /* ---------- COLLAB ---------- */
+  .rate-card{border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--card);display:flex;flex-direction:column;gap:8px;transition:border-color .2s,transform .2s}
+  .rate-card:hover{border-color:rgba(94,230,255,.45);transform:translateY(-3px)}
+  .rate-card .rc-name{font-size:14.5px;font-weight:600}
+  .rate-card .rc-desc{font-size:12.8px;color:var(--muted);flex:1}
+  .rate-card .rc-price{font-family:'Anton',sans-serif;font-size:23px;color:var(--cyan);letter-spacing:.02em}
+
+  .form-card{border:1px solid var(--line);border-radius:22px;padding:30px;background:linear-gradient(165deg,rgba(194,255,61,.07),rgba(255,255,255,.025))}
+  .field{display:flex;flex-direction:column;gap:7px;margin-bottom:15px}
+  .field label{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+  input,select,textarea{
+    width:100%;padding:12px 14px;border-radius:11px;border:1px solid var(--line);
+    background:rgba(8,9,12,.65);color:var(--txt);font-family:inherit;font-size:14.5px;outline:none;
+    transition:border-color .18s,box-shadow .18s;
+  }
+  input:focus,select:focus,textarea:focus{border-color:rgba(194,255,61,.6);box-shadow:0 0 0 3px rgba(194,255,61,.13)}
+  textarea{resize:vertical;min-height:96px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:560px){.frow{grid-template-columns:1fr}}
+  .submit{width:100%;justify-content:center;margin-top:6px}
+  .form-note{font-size:12px;color:var(--muted);margin-top:12px;text-align:center}
+  .ok-msg{display:none;padding:14px 16px;border-radius:12px;background:rgba(194,255,61,.12);
+    border:1px solid rgba(194,255,61,.45);color:var(--lime);font-size:13.5px;font-weight:600;margin-top:14px;text-align:center}
+  .ok-msg.show{display:block}
+
+  /* ---------- NEWSLETTER ---------- */
+  .news{border:1px solid var(--line);border-radius:26px;padding:46px 34px;text-align:center;
+    background:radial-gradient(600px 220px at 50% 0%,rgba(194,255,61,.14),transparent 70%),rgba(255,255,255,.03)}
+  .news h2{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(26px,4vw,40px);line-height:1.05;margin-bottom:12px}
+  .news p{color:var(--muted);max-width:520px;margin:0 auto 26px;font-size:15px}
+  .news-form{display:flex;gap:10px;max-width:520px;margin:0 auto;flex-wrap:wrap}
+  .news-form input{flex:1 1 240px}
+
+  /* ---------- FOOTER ---------- */
+  footer{border-top:1px solid var(--line);padding:44px 0 30px;margin-top:20px;background:rgba(255,255,255,.015)}
+  .foot-top{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;margin-bottom:30px}
+  .foot-brand{max-width:330px}
+  .foot-brand p{color:var(--muted);font-size:13.5px;margin-top:12px}
+  .socials{display:flex;gap:9px;margin-top:18px;flex-wrap:wrap}
+  .socials a{width:40px;height:40px;border-radius:11px;border:1px solid var(--line);display:grid;place-items:center;
+    color:var(--muted);font-size:14px;transition:all .18s;background:rgba(255,255,255,.03)}
+  .socials a:hover{color:var(--lime);border-color:rgba(194,255,61,.5);background:rgba(194,255,61,.09);transform:translateY(-2px)}
+  .foot-cols{display:flex;gap:56px;flex-wrap:wrap}
+  .foot-col h4{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--txt);margin-bottom:14px;font-weight:700}
+  .foot-col a{display:block;font-size:13.5px;color:var(--muted);padding:5px 0;transition:color .16s}
+  .foot-col a:hover{color:var(--lime)}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;gap:14px;
+    flex-wrap:wrap;font-size:12.5px;color:var(--muted);align-items:center}
+  .owner-link{color:var(--muted);text-decoration:underline;text-underline-offset:3px;font-size:12px}
+  .owner-link:hover{color:var(--lime)}
+
+  /* ---------- ADMIN MODAL ---------- */
+  .modal{position:fixed;inset:0;z-index:200;display:none;padding:22px;
+    background:rgba(4,5,7,.86);backdrop-filter:blur(8px);overflow:auto}
+  .modal.open{display:block}
+  .modal-in{max-width:900px;margin:40px auto;border:1px solid var(--line);border-radius:20px;
+    background:#0c0e13;padding:26px;box-shadow:0 40px 100px -30px #000}
+  .modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;gap:14px}
+  .modal-head h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:22px;letter-spacing:.03em}
+  .x{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);font-size:17px}
+  .x:hover{color:var(--txt);border-color:rgba(255,255,255,.3)}
+  .tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+  .tab{padding:9px 16px;border-radius:9px;border:1px solid var(--line);font-size:13px;font-weight:600;color:var(--muted)}
+  .tab.active{background:rgba(194,255,61,.14);border-color:rgba(194,255,61,.5);color:var(--lime)}
+  .admin-table{width:100%;border-collapse:collapse;font-size:13px}
+  .admin-table th{text-align:left;padding:9px 10px;color:var(--muted);font-size:11px;letter-spacing:.09em;text-transform:uppercase;border-bottom:1px solid var(--line)}
+  .admin-table td{padding:10px;border-bottom:1px solid rgba(255,255,255,.05);vertical-align:top}
+  .admin-empty{padding:26px;text-align:center;color:var(--muted);font-size:13.5px;border:1px dashed var(--line);border-radius:12px}
+  .admin-actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+  .mini-btn{padding:9px 15px;border-radius:9px;border:1px solid var(--line);font-size:12.5px;font-weight:600;color:var(--muted)}
+  .mini-btn:hover{border-color:rgba(194,255,61,.5);color:var(--lime)}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .marquee-track{animation:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+<div class="bg-fx"></div>
+<div class="bg-grid"></div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#home" class="logo"><span class="dot"></span> TFG GAMING</a>
+    <nav class="nav-links">
+      <a href="#videos">Videos</a>
+      <a href="#store">My Gear</a>
+      <a href="#support">Support</a>
+      <a href="#collab">Work With Me</a>
+    </nav>
+    <a href="#collab" class="nav-cta">Brand Enquiry</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#videos">Videos</a>
+    <a href="#store">My Gear</a>
+    <a href="#support">Support</a>
+    <a href="#collab">Work With Me</a>
+    <a href="#newsletter">Free Setup Guide</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="badge"><span class="live-dot"></span> <span id="heroBadge">New video every week</span></div>
+        <h1 class="hero-title">Level up<br><span class="grad">your gameplay</span></h1>
+        <p class="hero-tag" id="heroTag">Gameplay, honest gear reviews and no-fluff setup guides — built for Indian gamers who want results, not hype.</p>
+        <div class="btn-row">
+          <a href="#videos" class="btn btn-primary">▶ Watch Latest Video</a>
+          <a href="#collab" class="btn btn-ghost">Work With Me →</a>
+        </div>
+        <div class="stat-row" id="heroStats"></div>
+      </div>
+      <div class="hero-card reveal">
+        <div class="cam">
+          <div class="cam-badge"><span class="live-dot"></span> FEATURED</div>
+          <div class="cam-emoji">🎮</div>
+        </div>
+        <h3 id="featuredTitle">Latest Upload</h3>
+        <p id="featuredDesc">Tap to watch the newest video on YouTube.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee"></div>
+  </div>
+
+  <!-- VIDEOS -->
+  <section id="videos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Latest Uploads</div>
+        <h2 class="sec-title">Fresh from the channel</h2>
+        <p class="sec-sub">Real gameplay, real benchmarks. Every video is made to help you play better or buy smarter.</p>
+      </div>
+      <div class="grid g3" id="videoGrid"></div>
+    </div>
+  </section>
+
+  <!-- STORE -->
+  <section id="store">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">My Gear Picks</div>
+        <h2 class="sec-title">The setup I actually use</h2>
+        <p class="sec-sub">Everything here is tested on my own setup. Buy through these links and the channel earns a small commission — you pay the same price.</p>
+      </div>
+      <div class="grid g3" id="productGrid"></div>
+      <p class="disclosure">Affiliate disclosure: some links on this page are affiliate links. If you buy through them, I may earn a commission at no extra cost to you. I only recommend gear I have used or would personally buy.</p>
+    </div>
+  </section>
+
+  <!-- SUPPORT -->
+  <section id="support">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Support the Channel</div>
+        <h2 class="sec-title">Keep the grind going</h2>
+        <p class="sec-sub">Every rupee goes straight back into better gear, better edits and better videos. Support is always optional — watching and sharing is already a huge help.</p>
+      </div>
+      <div class="support-grid">
+        <div class="panel reveal">
+          <h3 style="font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:20px;letter-spacing:.03em">Direct UPI</h3>
+          <p style="color:var(--muted);font-size:13.8px;margin-top:6px">Fastest way to support from India — scan the QR or copy the UPI ID.</p>
+          <div class="upi-box">
+            <div class="upi-id" id="upiId">—</div>
+            <button class="copy-btn" id="copyUpi">Copy UPI ID</button>
+          </div>
+          <div class="qr-wrap">
+            <img id="qrImg" alt="UPI QR code to support TFG GAMING" />
+            <small>Scan with any UPI app — GPay, PhonePe, Paytm</small>
+          </div>
+        </div>
+        <div class="panel reveal">
+          <h3 style="font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:20px;letter-spacing:.03em">Other ways to help</h3>
+          <p style="color:var(--muted);font-size:13.8px;margin-top:6px">No pressure at all. Free options work just as well.</p>
+          <div class="support-list" id="supportList"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLAB -->
+  <section id="collab">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Brand Collabs</div>
+        <h2 class="sec-title">Work with me</h2>
+        <p class="sec-sub">An audience that actually buys. If your product fits gaming, peripherals or tech, let's talk.</p>
+      </div>
+
+      <div class="grid g4" id="collabStats" style="margin-bottom:34px"></div>
+
+      <div class="grid g4" id="rateGrid" style="margin-bottom:34px"></div>
+
+      <div class="form-card reveal">
+        <h3 style="font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:22px;letter-spacing:.03em;margin-bottom:6px">Brand enquiry</h3>
+        <p style="color:var(--muted);font-size:13.8px;margin-bottom:22px">Tell me about your product and budget. I reply within 48 hours.</p>
+        <form id="enquiryForm" novalidate>
+          <div class="frow">
+            <div class="field"><label for="enqName">Your name</label><input id="enqName" name="name" required placeholder="Rahul Sharma" /></div>
+            <div class="field"><label for="enqCompany">Company / brand</label><input id="enqCompany" name="company" required placeholder="Acme Peripherals" /></div>
+          </div>
+          <div class="frow">
+            <div class="field"><label for="enqEmail">Work email</label><input id="enqEmail" name="email" type="email" required placeholder="you@brand.com" /></div>
+            <div class="field"><label for="enqBudget">Budget range</label>
+              <select id="enqBudget" name="budget">
+                <option>Under ₹15,000</option>
+                <option>₹15,000 – ₹40,000</option>
+                <option>₹40,000 – ₹1,00,000</option>
+                <option>₹1,00,000+</option>
+                <option>Not decided yet</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="enqMsg">What do you have in mind?</label><textarea id="enqMsg" name="message" required placeholder="Product, campaign dates, deliverables you want…"></textarea></div>
+          <button type="submit" class="btn btn-primary submit">Send Enquiry →</button>
+          <p class="form-note">Or email directly: <a id="mailLink" href="#" style="color:var(--lime);text-decoration:underline"></a></p>
+          <div class="ok-msg" id="enqOk">Thanks! Your enquiry is saved — I'll get back to you within 48 hours.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter">
+    <div class="wrap">
+      <div class="news reveal">
+        <h2>Free gaming setup guide</h2>
+        <p>Get my exact ₹25,000 budget setup, the settings I use, and one useful email a week. No spam, unsubscribe anytime.</p>
+        <form class="news-form" id="newsForm" novalidate>
+          <input id="newsEmail" type="email" placeholder="your@email.com" aria-label="Email address" required />
+          <button type="submit" class="btn btn-primary">Get the guide</button>
+        </form>
+        <div class="ok-msg" id="newsOk">You're in! Check your inbox for the guide.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="#home" class="logo"><span class="dot"></span> TFG GAMING</a>
+        <p>Indian gaming creator. Gameplay, honest gear reviews and setup guides that respect your budget.</p>
+        <div class="socials" id="footSocials"></div>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Explore</h4>
+          <a href="#videos">Videos</a>
+          <a href="#store">My Gear</a>
+          <a href="#support">Support</a>
+          <a href="#collab">Work With Me</a>
+        </div>
+        <div class="foot-col">
+          <h4>Contact</h4>
+          <a id="footMail" href="#">Email</a>
+          <a href="#collab">Brand enquiries</a>
+          <a href="#newsletter">Newsletter</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> TFG GAMING. All rights reserved.</span>
+      <span>Affiliate links support this channel · <button class="owner-link" id="ownerBtn">Owner panel</button></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ADMIN -->
+<div class="modal" id="adminModal" role="dialog" aria-modal="true" aria-label="Owner panel">
+  <div class="modal-in">
+    <div class="modal-head">
+      <h3>Owner panel</h3>
+      <button class="x" id="adminClose" aria-label="Close">✕</button>
+    </div>
+    <div id="adminGate">
+      <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">Enter the owner passphrase to view saved enquiries and subscribers.</p>
+      <div class="field"><label for="adminPass">Passphrase</label><input id="adminPass" type="password" placeholder="••••••••" /></div>
+      <button class="btn btn-primary" id="adminEnter" style="width:100%;justify-content:center">Unlock</button>
+      <div class="ok-msg" id="adminErr" style="background:rgba(255,90,90,.12);border-color:rgba(255,90,90,.45);color:#ff8a8a">Wrong passphrase. Try again.</div>
+    </div>
+    <div id="adminBody" style="display:none">
+      <div class="tabs">
+        <button class="tab active" data-tab="enq">Enquiries (<span id="cntEnq">0</span>)</button>
+        <button class="tab" data-tab="subs">Subscribers (<span id="cntSubs">0</span>)</button>
+      </div>
+      <div id="adminTableWrap"></div>
+      <div class="admin-actions">
+        <button class="mini-btn" id="csvBtn">⤓ Export CSV</button>
+        <button class="mini-btn" id="clearBtn">Clear this list</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ==========================================================================
+   ⚙️  EDIT EVERYTHING HERE — this is the only block you need to touch.
+   Replace the placeholder links, UPI ID and numbers with your real ones.
+   ========================================================================== */
+const CONFIG = {
+  brand: {
+    name: "TFG GAMING",
+    tagline: "Gameplay, honest gear reviews and no-fluff setup guides — built for Indian gamers who want results, not hype.",
+    email: "tfggaming948@gmail.com",
+    heroBadge: "New video every week"
+  },
+
+  /* Your social links — replace each url */
+  socials: [
+    { label: "YouTube",  url: "https://www.youtube.com/@tfggaming", icon: "▶" },
+    { label: "Instagram",url: "https://www.instagram.com/tfggaming", icon: "◉" },
+    { label: "Discord",  url: "https://discord.gg/yourinvite",       icon: "◈" },
+    { label: "X",        url: "https://x.com/tfggaming",             icon: "✕" }
+  ],
+
+  /* Big numbers for the hero. Just type plain numbers. */
+  stats: [
+    { value: 125000, label: "Subscribers", suffix: "+" },
+    { value: 4.2,    label: "Million views / month", suffix: "" },
+    { value: 210,    label: "Videos published", suffix: "+" }
+  ],
+
+  /* Featured video + video grid.
+     thumb: leave "" for the built-in gradient card, or paste an image URL
+     (e.g. https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg) */
+  videos: [
+    { title: "₹25,000 Gaming Setup That Actually Runs Everything", tag: "Setup Guide", views: "412K views", date: "3 days ago", url: "https://www.youtube.com/@tfggaming", thumb: "" },
+    { title: "I Tested 6 Budget Mice — Only 2 Are Worth It",       tag: "Review",      views: "268K views", date: "1 week ago", url: "https://www.youtube.com/@tfggaming", thumb: "" },
+    { title: "Best Sensitivity Settings for BGMI 2026",            tag: "Guide",       views: "1.1M views", date: "2 weeks ago", url: "https://www.youtube.com/@tfggaming", thumb: "" },
+    { title: "Cheapest 165Hz Monitor — Is It Usable?",             tag: "Review",      views: "196K views", date: "3 weeks ago", url: "https://www.youtube.com/@tfggaming", thumb: "" },
+    { title: "Ranked Grind to Conqueror — Full Journey",           tag: "Gameplay",    views: "534K views", date: "1 month ago", url: "https://www.youtube.com/@tfggaming", thumb: "" },
+    { title: "5 Free Apps Every Mobile Gamer Should Install",      tag: "Tips",        views: "322K views", date: "1 month ago", url: "https://www.youtube.com/@tfggaming", thumb: "" }
+  ],
+
+  /* Affiliate products. Paste YOUR affiliate link in url. */
+  products: [
+    { name: "Wireless Gaming Mouse",  desc: "The one I actually use daily — 70g, 2.4GHz, zero lag.", price: "₹1,899", icon: "🖱️", url: "https://amzn.to/YOUR-AFFILIATE-LINK", thumb: "" },
+    { name: "Budget Mechanical Keyboard", desc: "Best typing feel under ₹3,000. Blue switches, full RGB.", price: "₹2,499", icon: "⌨️", url: "https://amzn.to/YOUR-AFFILIATE-LINK", thumb: "" },
+    { name: "Gaming Headset",          desc: "Clear mic, comfy for 6-hour sessions, under ₹2,000.",   price: "₹1,749", icon: "🎧", url: "https://amzn.to/YOUR-AFFILIATE-LINK", thumb: "" },
+    { name: "165Hz Gaming Monitor",    desc: "The single biggest upgrade most players can make.",     price: "₹12,999", icon: "🖥️", url: "https://amzn.to/YOUR-AFFILIATE-LINK", thumb: "" },
+    { name: "Controller for Mobile",   desc: "Turns any phone into a real handheld. My daily driver.", price: "₹2,299", icon: "🎮", url: "https://amzn.to/YOUR-AFFILIATE-LINK", thumb: "" },
+    { name: "Streaming Mic",           desc: "Clean audio for streams and voiceovers on a budget.",    price: "₹3,499", icon: "🎙️", url: "https://amzn.to/YOUR-AFFILIATE-LINK", thumb: "" }
+  ],
+
+  /* Support — replace upiId with YOUR real UPI ID.
+     qrImage: leave "" to keep the auto-generated QR, or set an image URL. */
+  support: {
+    upiId: "tfggaming@upi",
+    upiName: "TFG GAMING",
+    qrImage: "",
+    options: [
+      { title: "Join channel membership", desc: "Badges, emotes and early access on YouTube", icon: "★", url: "https://www.youtube.com/@tfggaming/join" },
+      { title: "Buy me a coffee",          desc: "One-time support, no strings attached",      icon: "☕", url: "https://buymeacoffee.com/tfggaming" },
+      { title: "Subscribe on YouTube",     desc: "Free — and it genuinely helps the most",     icon: "▶", url: "https://www.youtube.com/@tfggaming" }
+    ]
+  },
+
+  /* Media kit numbers for the brand collab section */
+  collabStats: [
+    { value: "125K+", label: "Subscribers" },
+    { value: "4.2M",  label: "Monthly views" },
+    { value: "8.4%",  label: "Avg. engagement" },
+    { value: "82%",   label: "Audience from India" }
+  ],
+
+  /* Rate card. Change prices freely. */
+  rates: [
+    { name: "Dedicated Video",   desc: "3–5 min integration inside a full review or gameplay video", price: "₹25,000" },
+    { name: "Short / Reel",      desc: "30–45 sec vertical video, 2 platform posts",                 price: "₹8,000" },
+    { name: "Live Stream Mention", desc: "2 min live shoutout + pinned link in chat",                price: "₹5,000" },
+    { name: "Bundle (3 videos)", desc: "Best value — mixed formats across a month",                   price: "₹60,000" }
+  ],
+
+  /* FORMS: paste a free Formspree endpoint (https://formspree.io) to receive
+     real submissions in your email. Leave "" to save submissions locally
+     (visible in the Owner panel below). */
+  forms: { endpoint: "" },
+
+  /* Owner panel passphrase. Change this before you publish. */
+  admin: { passphrase: "tfg2026" }
+};
+/* ======================= END OF EDITABLE BLOCK ============================ */
+
+/* ---------- helpers ---------- */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = (s) => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+/* ---------- render ---------- */
+function renderHero() {
+  $('#heroTag').textContent = CONFIG.brand.tagline;
+  $('#heroBadge').textContent = CONFIG.brand.heroBadge;
+  $('#heroStats').innerHTML = CONFIG.stats.map(s => `
+    <div class="stat"><b data-count="${s.value}" data-suffix="${esc(s.suffix || '')}">0</b><span>${esc(s.label)}</span></div>`).join('');
+
+  const first = CONFIG.videos[0];
+  if (first) {
+    $('#featuredTitle').textContent = first.title;
+    $('#featuredDesc').textContent = `${first.views} · ${first.date} — tap to watch on YouTube.`;
+    $('.hero-card').style.cursor = 'pointer';
+    $('.hero-card').addEventListener('click', () => window.open(first.url, '_blank', 'noopener'));
+  }
+
+  $('#marquee').innerHTML = (CONFIG.socials.map(s => `<span>${esc(s.label)}</span>`).join('') +
+    `<span>Gameplay</span><span>Gear Reviews</span><span>Setup Guides</span><span>Brand Collabs</span>`).repeat(2);
+}
+
+function renderVideos() {
+  const list = CONFIG.videos;
+  const featured = list[0];
+  const rest = list.slice(1);
+  const thumb = (v) => `
+    <div class="thumb">
+      ${v.thumb ? `<img src="${esc(v.thumb)}" alt="${esc(v.title)}" loading="lazy" />` : ''}
+      <span class="tag">${esc(v.tag)}</span>
+      <span class="play">▶</span>
+    </div>`;
+  const card = (v) => `
+    <a class="card" href="${esc(v.url)}" target="_blank" rel="noopener">
+      ${thumb(v)}
+      <div class="card-body">
+        <h3>${esc(v.title)}</h3>
+        <div class="meta"><span>${esc(v.views)}</span><i></i><span>${esc(v.date)}</span></div>
+      </div>
+    </a>`;
+
+  $('#videoGrid').innerHTML =
+    (featured ? `<a class="card featured" href="${esc(featured.url)}" target="_blank" rel="noopener">
+        ${thumb(featured)}
+        <div class="card-body">
+          <span class="tag" style="position:static;align-self:flex-start;margin-bottom:4px">${esc(featured.tag)}</span>
+          <h3>${esc(featured.title)}</h3>
+          <div class="meta"><span>${esc(featured.views)}</span><i></i><span>${esc(featured.date)}</span></div>
+          <span class="buy" style="align-self:flex-start;margin-top:10px">Watch on YouTube →</span>
+        </div>
+      </a>` : '') + rest.map(card).join('');
+}
+
+function renderProducts() {
+  $('#productGrid').innerHTML = CONFIG.products.map(p => `
+    <article class="card">
+      <div class="prod-img">${p.thumb ? `<img src="${esc(p.thumb)}" alt="${esc(p.name)}" loading="lazy" />` : `<span>${esc(p.icon || '🎮')}</span>`}</div>
+      <div class="card-body">
+        <h3>${esc(p.name)}</h3>
+        <p class="meta" style="line-height:1.5">${esc(p.desc)}</p>
+        <div class="price">${esc(p.price)}</div>
+        <a class="buy" href="${esc(p.url)}" target="_blank" rel="noopener sponsored">Buy Now →</a>
+      </div>
+    </article>`).join('');
+}
+
+function renderSupport() {
+  $('#upiId').textContent = CONFIG.support.upiId;
+  const qr = CONFIG.support.qrImage || 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNjAiIGhlaWdodD0iMzYwIiBjbGFzcz0ic2Vnbm8iPjxnIHRyYW5zZm9ybT0ic2NhbGUoOCkiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDBoNDV2NDVoLTQ1eiIvPjxwYXRoIGNsYXNzPSJxcmxpbmUiIHN0cm9rZT0iIzA4MDkwYyIgZD0iTTIgMi41aDdtMSAwaDJtMyAwaDRtMSAwaDRtMiAwaDFtMSAwaDJtMSAwaDJtMyAwaDdtLTQxIDFoMW01IDBoMW0xIDBoMW0yIDBoMW0yIDBoMm0xIDBoMm0xIDBoMm0yIDBoMW0yIDBoMm0xIDBoMW0xIDBoMW0xIDBoMW01IDBoMW0tNDEgMWgxbTEgMGgzbTEgMGgxbTMgMGg0bTEgMGgxbTEgMGg3bTIgMGgybTIgMGgxbTMgMGgxbTEgMGgzbTEgMGgxbS00MSAxaDFtMSAwaDNtMSAwaDFtMSAwaDJtMyAwaDJtMSAwaDNtMSAwaDFtMiAwaDFtMSAwaDFtMSAwaDFtMSAwaDRtMSAwaDFtMSAwaDNtMSAwaDFtLTQxIDFoMW0xIDBoM20xIDBoMW0xIDBoMW00IDBoMW0yIDBoMm0xIDBoMW0yIDBoMm0zIDBoNG0zIDBoMW0xIDBoM20xIDBoMW0tNDEgMWgxbTUgMGgxbTEgMGgxbTIgMGgxbTEgMGgybTEgMGgxbTMgMGgxbTEgMGgybTIgMGgybTMgMGgybTEgMGgxbTUgMGgxbS00MSAxaDdtMSAwaDFtMSAwaDFtMSAwaDFtMSAwaDFtMSAwaDFtMSAwaDFtMSAwaDFtMSAwaDFtMSAwaDFtMSAwaDFtMSAwaDFtMSAwaDFtMSAwaDFtMSAwaDdtLTMyIDFoMm0yIDBoNW00IDBoOW0tMjggMWgxbTIgMGgxbTQgMGg2bTMgMGgxbTEgMGgxbTIgMGgxbTQgMGgxbTEgMGgxbTIgMGgzbTEgMGgybS00MSAxaDNtMSAwaDFtMiAwaDJtMSAwaDJtMiAwaDFtMSAwaDNtMiAwaDZtMSAwaDNtMSAwaDFtMSAwaDJtNCAwaDFtLTQwIDFoMm0zIDBoMW0zIDBoMW0xIDBoM20yIDBoM20yIDBoMW0yIDBoMm0xIDBoMW0yIDBoMW0zIDBoMm0xIDBoMW0tMzkgMWgzbTEgMGgxbTMgMGgxbTUgMGgxbTMgMGgxbTEgMGgxbTUgMGgzbTEgMGg2bTIgMGgxbS0zOSAxaDFtMSAwaDJtMiAwaDJtNCAwaDFtMiAwaDFtNCAwaDJtMSAwaDFtMSAwaDVtNCAwaDFtMiAwaDFtMSAwaDJtLTM5IDFoMW00IDBoMW0yIDBoMm0yIDBoMW0xIDBoMW0xIDBoMW0xIDBoMW0xIDBoMW0xIDBoNG0yIDBoMW0yIDBoMm0yIDBoMW0yIDBoMW0tMzkgMWgxbTEgMGgzbTEgMGgybTMgMGgxbTEgMGgybTEgMGgzbTEgMGgybTMgMGgzbTIgMGgybTIgMGg1bS00MSAxaDNtMSAwaDJtMSAwaDFtMSAwaDFtMSAwaDJtMSAwaDFtMiAwaDZtMSAwaDNtMSAwaDRtMiAwaDFtMSAwaDFtLTM0IDFoMW0xIDBoM20yIDBoNm00IDBoM20xIDBoNG0zIDBoMm00IDBoMW0xIDBoMm0tNDEgMWgxbTMgMGgybTEgMGgybTEgMGg0bTEgMGgybTEgMGgxbTEgMGgxbTMgMGgzbTQgMGgxbTEgMGgybTMgMGgzbS0zOCAxaDFtMiAwaDRtNiAwaDNtMiAwaDNtNiAwaDFtNyAwaDNtLTQxIDFoMW0yIDBoM20yIDBoMW02IDBoMW0zIDBoMm0zIDBoMW00IDBoNG0xIDBoNG0xIDBoMW0tMzkgMWgxbTEgMGg0bTEgMGg2bTEgMGgzbTEgMGgxbTIgMGgxbTMgMGgxbTIgMGgybTIgMGgybTEgMGgxbTIgMGgybS00MSAxaDRtNSAwaDVtMSAwaDJtNSAwaDVtMSAwaDFtMSAwaDVtMyAwaDFtMSAwaDFtLTQxIDFoMW0xIDBoMm0xIDBoMm0xIDBoMW0xIDBoMW0yIDBoMm0xIDBoMW0xIDBoMW0yIDBoMm0zIDBoMW0yIDBoMW0xIDBoMW02IDBoMm0tMzkgMWgxbTMgMGgxbTIgMGgxbTMgMGgxbTMgMGgxbTIgMGgxbTEgMGg0bTMgMGgxbTEgMGgxbTIgMGg0bTEgMGgxbS0zOSAxaDdtMiAwaDNtMiAwaDFtMiAwaDNtMyAwaDFtMiAwaDFtMiAwaDFtMiAwaDFtMSAwaDFtMyAwaDFtMSAwaDFtLTQwIDFoNW0xIDBoMW0xIDBoNm0xIDBoMW0xIDBoMm0yIDBoMW0xIDBoM20xIDBoNW0yIDBoMW0tMzYgMWgxbTEgMGgybTEgMGgzbTMgMGgxbTEgMGg0bTIgMGgxbTEgMGgybTEgMGgzbTIgMGgybTMgMGgxbTQgMGgybS00MSAxaDNtMSAwaDFtMiAwaDJtNCAwaDNtNCAwaDJtMyAwaDFtMSAwaDFtMSAwaDFtMSAwaDFtMSAwaDFtNiAwaDFtLTQwIDFoNG0xIDBoMm0xIDBoMW0xIDBoMW0zIDBoMW0xIDBoMW0zIDBoNm0xIDBoMm0xIDBoMm00IDBoMW0tMzUgMWgzbTEgMGgxbTMgMGgybTMgMGgxbTQgMGgzbTMgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTIgMGgxbTEgMGgxbS00MSAxaDFtNSAwaDFtMSAwaDFtMSAwaDNtNCAwaDFtMSAwaDJtMiAwaDFtMSAwaDFtNCAwaDRtMSAwaDNtMiAwaDFtLTM5IDFoNG0xIDBoMW0xIDBoMm0yIDBoMW0yIDBoMW01IDBoMW00IDBoNm0yIDBoMW0xIDBoMW0xIDBoMW0tNDAgMWgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGg1bTMgMGgybTIgMGgybTIgMGgxbTMgMGgybTEgMGg2bTEgMGgybS0zMiAxaDNtMSAwaDVtMiAwaDJtMSAwaDFtMiAwaDRtMiAwaDJtMyAwaDFtMiAwaDJtLTQxIDFoN20zIDBoMm00IDBoNG0yIDBoMW0xIDBoMm0zIDBoMW0xIDBoMm0xIDBoMW0xIDBoMm0xIDBoMW0tNDAgMWgxbTUgMGgxbTIgMGgxbTEgMGgxbTEgMGgzbTEgMGgxbTEgMGgxbTEgMGgzbTIgMGgxbTEgMGgybTIgMGgxbTMgMGgxbTEgMGgybS00MCAxaDFtMSAwaDNtMSAwaDFtMiAwaDFtMSAwaDFtMSAwaDFtMSAwaDNtNyAwaDFtMSAwaDJtMyAwaDVtMSAwaDNtLTQxIDFoMW0xIDBoM20xIDBoMW0xIDBoMm0xIDBoMW0zIDBoMW0zIDBoM20yIDBoMW0zIDBoMm00IDBoMW0xIDBoMW0xIDBoMW0tMzkgMWgxbTEgMGgzbTEgMGgxbTIgMGgxbTEgMGg2bTIgMGgxbTMgMGg0bTIgMGgybTIgMGgxbTEgMGgzbTIgMGgxbS00MSAxaDFtNSAwaDFtNSAwaDFtNCAwaDFtNCAwaDJtMSAwaDFtMSAwaDFtMSAwaDFtMSAwaDJtMSAwaDFtNCAwaDFtLTQwIDFoN20yIDBoMW0xIDBoMW0xIDBoNG0xIDBoM20yIDBoMW0xIDBoMW0xIDBoMW0xIDBoMW0yIDBoMW0xIDBoMW0yIDBoMyIvPjwvZz48L3N2Zz4K';
+  $('#qrImg').src = qr;
+
+  $('#supportList').innerHTML = CONFIG.support.options.map(o => `
+    <a class="support-item" href="${esc(o.url)}" target="_blank" rel="noopener">
+      <span class="si-icon">${esc(o.icon)}</span>
+      <span class="si-txt"><b>${esc(o.title)}</b><span>${esc(o.desc)}</span></span>
+      <span class="si-arrow">→</span>
+    </a>`).join('');
+
+  $('#copyUpi').addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(CONFIG.support.upiId);
+      $('#copyUpi').textContent = 'Copied ✓';
+    } catch {
+      const t = document.createElement('textarea');
+      t.value = CONFIG.support.upiId; document.body.appendChild(t); t.select();
+      document.execCommand('copy'); t.remove();
+      $('#copyUpi').textContent = 'Copied ✓';
+    }
+    setTimeout(() => { $('#copyUpi').textContent = 'Copy UPI ID'; }, 2000);
+  });
+}
+
+function renderCollab() {
+  $('#collabStats').innerHTML = CONFIG.collabStats.map(s => `
+    <div class="stat" style="flex:1 1 auto"><b>${esc(s.value)}</b><span>${esc(s.label)}</span></div>`).join('');
+
+  $('#rateGrid').innerHTML = CONFIG.rates.map(r => `
+    <div class="rate-card">
+      <span class="rc-name">${esc(r.name)}</span>
+      <span class="rc-desc">${esc(r.desc)}</span>
+      <span class="rc-price">${esc(r.price)}</span>
+    </div>`).join('');
+}
+
+function renderFooter() {
+  $('#year').textContent = new Date().getFullYear();
+  $('#footSocials').innerHTML = CONFIG.socials.map(s =>
+    `<a href="${esc(s.url)}" target="_blank" rel="noopener" aria-label="${esc(s.label)}" title="${esc(s.label)}">${esc(s.icon)}</a>`).join('');
+  $('#footMail').textContent = CONFIG.brand.email;
+  $('#footMail').href = 'mailto:' + CONFIG.brand.email;
+  $('#mailLink').textContent = CONFIG.brand.email;
+  $('#mailLink').href = 'mailto:' + CONFIG.brand.email;
+}
+
+/* ---------- counters ---------- */
+function animateCounters() {
+  $$('[data-count]').forEach(el => {
+    const target = parseFloat(el.dataset.count);
+    const suffix = el.dataset.suffix || '';
+    const decimals = (String(target).split('.')[1] || '').length;
+    const dur = 1400, start = performance.now();
+    const fmt = (n) => decimals ? n.toFixed(decimals) : Math.round(n).toLocaleString('en-IN');
+    const step = (now) => {
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(target * eased) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = (decimals ? target.toFixed(decimals) : target.toLocaleString('en-IN')) + suffix;
+    };
+    requestAnimationFrame(step);
+  });
+}
+
+/* ---------- storage + forms ---------- */
+const KEYS = { enq: 'tfg_enquiries', subs: 'tfg_subscribers' };
+const read = (k) => { try { return JSON.parse(localStorage.getItem(k)) || []; } catch { return []; } };
+const write = (k, v) => localStorage.setItem(k, JSON.stringify(v));
+
+async function submitToEndpoint(kind, payload) {
+  const ep = CONFIG.forms.endpoint;
+  if (!ep) return { ok: true, local: true };
+  try {
+    const res = await fetch(ep, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ ...payload, _subject: `TFG GAMING — ${kind}`, type: kind })
+    });
+    return { ok: res.ok, local: false };
+  } catch { return { ok: false, local: false }; }
+}
+
+function saveRecord(key, record) {
+  const all = read(key);
+  all.unshift({ ...record, at: new Date().toISOString() });
+  write(key, all);
+}
+
+/* ---------- admin ---------- */
+let adminTab = 'enq';
+function openAdmin() { $('#adminModal').classList.add('open'); $('#adminPass').focus(); }
+function closeAdmin() { $('#adminModal').classList.remove('open'); }
+function renderAdmin() {
+  const rows = adminTab === 'enq' ? read(KEYS.enq) : read(KEYS.subs);
+  $('#cntEnq').textContent = read(KEYS.enq).length;
+  $('#cntSubs').textContent = read(KEYS.subs).length;
+
+  if (!rows.length) {
+    $('#adminTableWrap').innerHTML = `<div class="admin-empty">Nothing saved yet. Submissions appear here once visitors send the forms.</div>`;
+    return;
+  }
+  const cols = adminTab === 'enq' ? ['at', 'name', 'company', 'email', 'budget', 'message'] : ['at', 'email'];
+  const head = cols.map(c => `<th>${c}</th>`).join('');
+  const body = rows.map(r => `<tr>${cols.map(c => `<td>${esc(r[c] ?? '—')}</td>`).join('')}</tr>`).join('');
+  $('#adminTableWrap').innerHTML = `<div style="overflow:auto"><table class="admin-table"><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
+}
+
+function exportCsv() {
+  const key = adminTab === 'enq' ? KEYS.enq : KEYS.subs;
+  const rows = read(key);
+  if (!rows.length) return alert('Nothing to export yet.');
+  const cols = Object.keys(rows[0]);
+  const csv = [cols.join(','), ...rows.map(r => cols.map(c => `"${String(r[c] ?? '').replace(/"/g, '""')}"`).join(','))].join('\n');
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `tfg-${adminTab}-${new Date().toISOString().slice(0, 10)}.csv`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+/* ---------- init ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+  renderHero();
+  renderVideos();
+  renderProducts();
+  renderSupport();
+  renderCollab();
+  renderFooter();
+  setTimeout(animateCounters, 260);
+
+  /* reveal on scroll */
+  if (!('IntersectionObserver' in window)) {
+    $$('.reveal').forEach(el => el.classList.add('in'));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  $$('.reveal').forEach(el => io.observe(el));
+  $$('section .card, .rate-card, .stat').forEach(el => { el.classList.add('reveal'); io.observe(el); });
+
+  /* if anything above the fold is still hidden after 2.5s, force it visible */
+  setTimeout(() => {
+    $$('.reveal:not(.in)').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in');
+    });
+  }, 2500);
+
+  /* mobile menu */
+  const burger = $('#burger'), menu = $('#mobileMenu');
+  burger.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', String(open));
+  });
+  $$('#mobileMenu a').forEach(a => a.addEventListener('click', () => { menu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }));
+
+  /* brand enquiry */
+  $('#enquiryForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = {
+      name: $('#enqName').value.trim(),
+      company: $('#enqCompany').value.trim(),
+      email: $('#enqEmail').value.trim(),
+      budget: $('#enqBudget').value,
+      message: $('#enqMsg').value.trim()
+    };
+    if (!data.name || !data.company || !data.email || !data.message) {
+      alert('Please fill in all fields before sending.');
+      return;
+    }
+    saveRecord(KEYS.enq, data);
+    const r = await submitToEndpoint('Brand enquiry', data);
+    if (!r.ok) { alert('Could not send right now. Please email me directly.'); return; }
+    e.target.reset();
+    $('#enqOk').classList.add('show');
+    setTimeout(() => $('#enqOk').classList.remove('show'), 6000);
+  });
+
+  /* newsletter */
+  $('#newsForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = $('#newsEmail').value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); return; }
+    saveRecord(KEYS.subs, { email });
+    await submitToEndpoint('Newsletter signup', { email });
+    $('#newsEmail').value = '';
+    $('#newsOk').classList.add('show');
+    setTimeout(() => $('#newsOk').classList.remove('show'), 6000);
+  });
+
+  /* admin */
+  $('#ownerBtn').addEventListener('click', openAdmin);
+  $('#adminClose').addEventListener('click', closeAdmin);
+  $('#adminModal').addEventListener('click', (e) => { if (e.target.id === 'adminModal') closeAdmin(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAdmin(); });
+  $('#adminEnter').addEventListener('click', () => {
+    if ($('#adminPass').value === CONFIG.admin.passphrase) {
+      $('#adminGate').style.display = 'none';
+      $('#adminBody').style.display = 'block';
+      renderAdmin();
+    } else {
+      $('#adminErr').classList.add('show');
+      setTimeout(() => $('#adminErr').classList.remove('show'), 3000);
+    }
+  });
+  $('#adminPass').addEventListener('keydown', (e) => { if (e.key === 'Enter') $('#adminEnter').click(); });
+  $$('.tab').forEach(t => t.addEventListener('click', () => {
+    $$('.tab').forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+    adminTab = t.dataset.tab;
+    renderAdmin();
+  }));
+  $('#csvBtn').addEventListener('click', exportCsv);
+  $('#clearBtn').addEventListener('click', () => {
+    const key = adminTab === 'enq' ? KEYS.enq : KEYS.subs;
+    if (confirm('Clear all saved ' + adminTab + '? This cannot be undone.')) { write(key, []); renderAdmin(); }
+  });
+});
+</script>
+</body>
+</html>
